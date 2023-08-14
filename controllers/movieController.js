@@ -32,8 +32,8 @@ const movieController = {
           },
         });
         res.json({
-          status: 'success',
-          statusCode: 200,
+          status: movies[1] ? 'success' : 'error',
+          statusCode: movies[1] ? 200 : 400,
           message: movies[1] ? 'Success create new movie' : 'Movie already exist',
           data: movies,
         });
