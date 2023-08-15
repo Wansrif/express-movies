@@ -31,7 +31,7 @@ const movieController = {
             genre,
           },
         });
-        res.json({
+        res.status().json({
           status: movies[1] ? 'success' : 'error',
           statusCode: movies[1] ? 200 : 400,
           message: movies[1] ? 'Success create new movie' : 'Movie already exist',

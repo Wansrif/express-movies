@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import db from './database/db.js';
 import movieRouter from './routes/movieRouter.js';
+import galleryRouter from './routes/galleryRouter.js';
 
 const port = process.env.APP_PORT || 3000;
 
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/movies', movieRouter);
+app.use('/api/gallery', galleryRouter);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
